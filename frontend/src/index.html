@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tugas 2</title>
+    <link rel="stylesheet" href="./output.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-green-200">
+    <div class="container mx-auto px-4 py-8">
+      <div class="bg-white p-10 rounded-lg shadow-lg">
+        <h1 class="text-3xl font-bold mb-2">
+          Simulasi Interaktif Model Komunikasi dalam Sistem Terdistribusi
+        </h1>
+        <h2 class="text-xl">
+          Tugas membuat simulasi komunikasi dua model sistem terdistribusi yaitu
+          Request-Response dan Message Passing
+        </h2>
+        <p class="text-gray-700 my-5">
+          Nama : Yoga Tiara Wiguna <br />
+          NIM : 11211086
+        </p>
+
+        <div>
+          <h2 class="text-2xl font-bold mb-4 text-green-700">
+            Request-Response Model
+          </h2>
+          <div class="border-2 p-5 rounded-md border-green-500">
+            <button
+              id="requestBtn"
+              class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4"
+            >
+              Send Request
+            </button>
+            <h2 class="text-xl font-semibold mb-4 text-green-500">
+              Response :
+            </h2>
+            <div id="response" class="text-red-500 font-medium">
+              Belum ada response!!
+            </div>
+
+            <pre
+              id="responseText"
+              class="bg-gray-200 p-4 rounded-lg text-sm text-black overflow-x-auto border-l-4 border-green-500 hidden"
+            >
+              <code></code>
+            </pre>
+          </div>
+        </div>
+
+        <div class="mt-8">
+          <h2 class="text-2xl font-bold mb-4 text-blue-700">
+            Message Passing Model
+          </h2>
+          <div class="border-2 p-5 rounded-md border-blue-500">
+            <div class="border p-4 rounded-md">
+              <div class="mb-6 text-2xl font-bold text-blue-400">Pengirim</div>
+              <div class="flex space-x-4">
+                <form class="max-w-md">
+                  <label
+                    for="default-search"
+                    class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+                    >Search</label
+                  >
+                  <div class="relative">
+                    <div
+                      class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+                    ></div>
+                    <input
+                      type="search"
+                      id="inputMessage"
+                      class="block w-96 p-4 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
+                      placeholder="Ketik pesan anda...."
+                      required
+                    />
+                    <button
+                      type="submit"
+                      id="messagePassing"
+                      class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                    >
+                      Kirim
+                    </button>
+                  </div>
+                </form>
+
+                <button
+                  type="button"
+                  id="endedMessage"
+                  class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
+                >
+                  Mengakhiri pesan
+                </button>
+              </div>
+              <div id="resMessage"></div>
+            </div>
+
+            <div class="border p-4 rounded-md mt-5">
+              <div class="mb-6 text-2xl font-bold text-blue-400">Penerima</div>
+
+              <h2 class="text-xl font-semibold mb-5 text-blue-500">Pesan :</h2>
+
+              <div id="message"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+  </body>
+</html>
